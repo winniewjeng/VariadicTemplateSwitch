@@ -5,20 +5,19 @@
 #include <iostream>
 #include "MySwitch.hpp"
 
-void Output() {
-    std::cout<<std::endl;
-}
-
-template<typename First, typename ... Strings>
-void Output(First arg, const Strings&... rest) {
-    std::cout<<arg<<" ";
-    Output(rest...);
-}
-
 int main() {
-    MySwitch Switch(1,2,4, 'c', "Boop");
-    
-    Output("I","am","a","sentence");
-    Output("Let's","try",1,"or",2,"digits");
+    MySwitch Switch('a','b','c', "Boop", 5);
+
     return 0;
 }
+
+//void Output() {
+//    std::cout<<std::endl;
+//}
+//
+//template<typename First, typename ... Strings>
+//void Output(First arg, const Strings&... rest) {
+//    std::cout<<arg<<" ";
+//    Output(rest...);
+//}
+
