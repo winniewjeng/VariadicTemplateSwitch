@@ -10,14 +10,13 @@ typedef char* cptr;  // iptr is a char pointer
 
 using namespace std;
 
-
 template<typename T>
 class MySwitch {
     
 private:
     
     map<T, string> myMap;
-
+    // create a vector<T> keys
     
 public:
     
@@ -31,16 +30,17 @@ public:
         }
     }
     
+    
     string Map(T item) {
+        myMap[item] = "";
+        myMap['a'] = "key is a\n";
+        myMap['b'] = "key is b\n";
+        myMap['c'] = "key is c\n";
+        myMap[1] = "key is 1\n";
+        myMap[2] = "key is 2\n";
+        myMap[3] = "key is 3\n";
         
-        myMap[item] = "000\n";
-        myMap['a'] = "aaa\n";
-        myMap['b'] = "bbb\n";
-        myMap['c'] = "ccc\n";
-        myMap['d'] = "ddd\n";
-        myMap[3] = "333\n";
-        
-//        myMap[] = "right\n";
+        //        myMap[] = "right\n";
         
         return myMap.find(item)->second;
     }
