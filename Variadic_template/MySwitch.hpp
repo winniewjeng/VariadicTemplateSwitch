@@ -5,9 +5,6 @@
 #include <string>
 #include <map>
 
-typedef void(*fptr)(); // fptr is a void function pointer
-typedef char* cptr;  // iptr is a char pointer
-
 using namespace std;
 
 template<typename T>
@@ -28,6 +25,7 @@ public:
         for (auto item : list) {
             cout << Map(item);
         }
+        cout << endl;
     }
     
     
@@ -39,9 +37,7 @@ public:
         myMap[1] = "key is 1\n";
         myMap[2] = "key is 2\n";
         myMap[3] = "key is 3\n";
-        
-        //        myMap[] = "right\n";
-        
+
         return myMap.find(item)->second;
     }
     
